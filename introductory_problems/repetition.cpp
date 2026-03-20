@@ -2,24 +2,20 @@
 #include <string>
 
 int main(){
-  std::string input;
-  char current_letter;
-  int longest_repetition=0;
-  int current_repetition=0;
+  std::string dna_strain;
+  std::cin>>dna_strain;
 
-  std::cin>>input;
+  int longest_repetition=1;
+  int current_repetition=1;
+  int length = dna_strain.size();
 
-  for(char c: input){
-    if(current_letter != c){
-      current_letter = c;
-      current_repetition = 1;
+  for(int i=1;i<=length;i++){
+    if(dna_strain[i-1] != dna_strain[i]){
+      current_repetition = 0;
     }
-    else{
-      current_repetition++;
-    }
-    if(longest_repetition < current_repetition){
-      longest_repetition = current_repetition;
-    }
+
+    current_repetition++;
+    longest_repetition = std::max(longest_repetition, current_repetition);
   }
 
   std::cout<<longest_repetition;
