@@ -32,4 +32,4 @@ Problems are from the CSES Problem Set:
 - https://cses.fi/problemset/
 
 ## Note
-Keeping my working convention, 1 issue 1 PR so i'm keeping my standard up while i'm making fun
+Keeping my working convention, 1 issue 1 PR so i'm keeping my standard up while i'm having fun
